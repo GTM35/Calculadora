@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #233329, #41b883);
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem 0;
+}
+
+.container > button {
+  background-color: #111;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100%;
+  outline: none;
+  width: 100%;
+}
+
+.container > button:hover {
+  background-color: #404040;
+}
+
+.container > .operator {
+  background-color: #41b88375;
+}
+
+.container > .operator:hover {
+  background-color: #62b08c;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.container > .output {
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: #222;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
+  height: 80%;
+  justify-content: space-around;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.output > .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.output > .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
